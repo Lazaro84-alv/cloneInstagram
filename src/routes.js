@@ -4,6 +4,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Feed from './pages/Feed';
 
+import Header from './components/Header';
+
 const Stack = createNativeStackNavigator();
 
 
@@ -15,8 +17,7 @@ export default function Routes(){
                 name="Feed" 
                 component={Feed} 
                 options={{ 
-                    title: 'Feed', 
-                    headerTitleAlign: 'center', 
+                    headerTitle: () => <Header />,
                     headerStyle: {
                         backgroundColor: '#F5F5F5',
                     },
