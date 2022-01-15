@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { FlatList } from 'react-native';
 
-import api from '../../services/api'; 
+import FeedImage from '../../components/FeedImage';
 
-import { Container, Post, Header, Avatar, Name, Description, Loading } from './styles';
+import api from '../../services/api';
+
+import {
+  Container,
+  Post,
+  Header,
+  Avatar,
+  Name,
+  Description,
+  Loading,
+} from './styles';
 
 export default function Feed() {
   const [feed, setFeed] = useState([]);
@@ -69,7 +79,3 @@ export default function Feed() {
     </Container>
   );
 }
-
-
-
- 
